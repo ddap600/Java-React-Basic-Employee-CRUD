@@ -1,4 +1,4 @@
-package com.java_learning.emplyee_backend.entity;
+package com.java_learning.employee_backend.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

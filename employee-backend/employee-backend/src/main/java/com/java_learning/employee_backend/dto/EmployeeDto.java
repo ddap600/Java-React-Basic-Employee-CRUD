@@ -1,4 +1,4 @@
-package com.java_learning.emplyee_backend.dto;
+package com.java_learning.employee_backend.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

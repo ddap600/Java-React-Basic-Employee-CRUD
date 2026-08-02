@@ -1,7 +1,7 @@
-package com.java_learning.emplyee_backend.mapper;
+package com.java_learning.employee_backend.mapper;
 
-import com.java_learning.emplyee_backend.dto.EmployeeDto;
-import com.java_learning.emplyee_backend.entity.Employee;
+import com.java_learning.employee_backend.dto.EmployeeDto;
+import com.java_learning.employee_backend.entity.Employee;
 
 public class EmployeeMapper {
 

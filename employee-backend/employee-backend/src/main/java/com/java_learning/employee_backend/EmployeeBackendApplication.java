@@ -1,4 +1,4 @@
-package com.java_learning.emplyee_backend;
+package com.java_learning.employee_backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

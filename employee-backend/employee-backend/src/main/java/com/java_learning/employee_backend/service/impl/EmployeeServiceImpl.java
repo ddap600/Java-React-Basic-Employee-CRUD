@@ -1,10 +1,10 @@
-package com.java_learning.emplyee_backend.service.impl;
+package com.java_learning.employee_backend.service.impl;
 
-import com.java_learning.emplyee_backend.dto.EmployeeDto;
-import com.java_learning.emplyee_backend.entity.Employee;
-import com.java_learning.emplyee_backend.mapper.EmployeeMapper;
-import com.java_learning.emplyee_backend.repository.EmployeeRepository;
-import com.java_learning.emplyee_backend.service.EmployeeService;
+import com.java_learning.employee_backend.dto.EmployeeDto;
+import com.java_learning.employee_backend.entity.Employee;
+import com.java_learning.employee_backend.mapper.EmployeeMapper;
+import com.java_learning.employee_backend.repository.EmployeeRepository;
+import com.java_learning.employee_backend.service.EmployeeService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

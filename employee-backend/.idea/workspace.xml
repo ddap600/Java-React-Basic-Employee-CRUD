@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ab90e24-ac7f-4ee7-b5e6-daadde9196dd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../README.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-backend/src/main/java/java/learning/employee_backend/EmployeeBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-backend/src/main/java/com/java_learning/emplyee_backend/EmployeeBackendApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/employee-backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee-backend/src/test/java/java/learning/employee_backend/EmployeeBackendApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/employee-backend/src/test/java/java/learning/employee_backend/EmployeeBackendApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +38,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.EmployeeBackendApplication.executor": "Debug",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Admin/Desktop/Java/Java React Basic Emplyee CRUD/employee-backend",
@@ -44,6 +46,27 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="EmployeeBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="employee-backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.java_learning.emplyee_backend.EmployeeBackendApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.java_learning.emplyee_backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.EmployeeBackendApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

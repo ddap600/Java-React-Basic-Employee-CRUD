@@ -2,6 +2,7 @@ package com.java_learning.employee_backend.service.impl;
 
 import com.java_learning.employee_backend.dto.EmployeeDto;
 import com.java_learning.employee_backend.entity.Employee;
+import com.java_learning.employee_backend.exception.ResourceNotFoundException;
 import com.java_learning.employee_backend.mapper.EmployeeMapper;
 import com.java_learning.employee_backend.repository.EmployeeRepository;
 import com.java_learning.employee_backend.service.EmployeeService;
@@ -21,5 +22,14 @@ public class EmployeeServiceImpl implements EmployeeService {
         Employee savedEmployee = employeeRepository.save(employee);
 
         return EmployeeMapper.mapToEmployeeDto(savedEmployee);
+    }
+
+    @Override
+    public EmployeeDto getEmployeeById(Long employeeId) {
+
+        Employee employee = employeeRepository.findById(employeeId)
+                .orElseThrow(() -> new ResourceNotFoundException("Employee does not exist with given id"));
+
+        return EmployeeMapper.mapToEmployeeDto(employee);
     }
 }

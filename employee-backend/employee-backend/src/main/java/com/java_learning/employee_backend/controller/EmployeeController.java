@@ -36,4 +36,11 @@ public class EmployeeController {
         List<EmployeeDto> employees = employeeService.getAllEmlpoyees();
         return ResponseEntity.ok(employees);
     }
+
+    // Build Update Employee REST API
+    @PutMapping("{id}")
+    public ResponseEntity<EmployeeDto> updateEmployee(@PathVariable("id") Long employeeId, @RequestBody EmployeeDto employeeDto){
+        EmployeeDto updatedEmployee = employeeService.updateEmployee(employeeId, employeeDto);
+        return ResponseEntity.ok(updatedEmployee);
+    }
 }

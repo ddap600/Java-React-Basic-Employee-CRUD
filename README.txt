@@ -1,10 +1,11 @@
 Frontend:
 
-Front end was built using React and Javascript, initialized using Vite.
+Front end was built using React and Javascript, initialized using Vite by running "npm create vite@latest".
+I also installed Boostrap, by running "npm install bootstrap --save".
 
 If you are cloning, you might need to run "npm install" in the project folder.
 
-To start the front:
+To start the frontend:
 Start a command line terminal, move to the project directory and run "npm run dev".
 
 Backend:

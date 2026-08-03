@@ -1,3 +1,12 @@
+Frontend:
+
+Front end was built using React and Javascript, initialized using Vite.
+
+If you are cloning, you might need to run "npm install" in the project folder.
+
+To start the front:
+Start a command line terminal, move to the project directory and run "npm run dev".
+
 Backend:
 
 These are steps I took when first setting up the project.

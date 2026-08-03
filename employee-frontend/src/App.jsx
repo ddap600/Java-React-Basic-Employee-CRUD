@@ -1,10 +1,12 @@
 import './App.css'
+import './HelloWorld.jsx'
+import HelloWorld from "./HelloWorld.jsx";
 
 function App() {
 
   return (
       <>
-        <h1>Hello World</h1>
+        <HelloWorld/>
       </>
   )
 }

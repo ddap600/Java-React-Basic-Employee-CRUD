@@ -1,7 +1,7 @@
 import React from "react";
-import {useState} from "react";
-import {useEffect} from "react";
-import {listEmployees} from "../services/EmployeeService.js";
+import { useState } from "react";
+import { useEffect } from "react";
+import { listEmployees } from "../services/EmployeeService.js";
 
 const ListEmployee = () => {
 

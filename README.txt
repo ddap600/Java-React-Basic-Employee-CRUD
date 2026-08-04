@@ -20,6 +20,11 @@ Go pom.xml, right-click, "add as maven project".
 Go to settings and enable annotation processing.
 Go to settings and enable / install the Lombok plugin.
 
+Front To End Connection:
+
+To coonect the React Frontend to the Java Backend I am using axios.
+Installed, by running "npm install axios --save"
+
 Database:
 
 This project uses a MySQL database.

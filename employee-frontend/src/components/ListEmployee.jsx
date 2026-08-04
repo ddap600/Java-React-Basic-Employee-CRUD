@@ -26,6 +26,7 @@ const ListEmployee = () => {
     <div className={"container"}>
       <h2 className={"text-center"}>List of employees</h2>
       <table className={"table table-striped table-bordered"}>
+
         <thead>
           <tr>
             <th>Id</th>
@@ -45,6 +46,7 @@ const ListEmployee = () => {
             </tr>
           ))}
         </tbody>
+
       </table>
     </div>
   );

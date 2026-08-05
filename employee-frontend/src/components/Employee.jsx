@@ -7,23 +7,65 @@ const Employee = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
 
+  const [errors, setErrors] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+  });
+
   const navigator = useNavigate();
 
   const saveEmployee = (event) => {
     event.preventDefault();
 
-    const employee = {
-      firstName,
-      lastName,
-      email,
-    };
+    if (validateForm()) {
+      const employee = {
+        firstName,
+        lastName,
+        email,
+      };
 
-    console.log(employee);
+      console.log(employee);
 
-    createEmployee(employee).then((response) => {
-      console.log(response.data);
-      navigator("/employee");
-    });
+      createEmployee(employee).then((response) => {
+        console.log(response.data);
+        navigator("/employee");
+      });
+    }
+
+    function validateForm() {
+      let valid = true;
+
+      // ... -> spread operator : it means "copy everything from errors into a new object"
+      const errorsCopy = { ...errors };
+
+      // if first name is not empty, trim() will return a value
+      // so we use this to check if first name is empty or not
+      if (firstName.trim()) {
+        errorsCopy.firstName = "";
+      } else {
+        errorsCopy.firstName = "First name is required!";
+        valid = false;
+      }
+
+      if (lastName.trim()) {
+        errorsCopy.lastName = "";
+      } else {
+        errorsCopy.lastName = "Last name is required!";
+        valid = false;
+      }
+
+      if (email.trim()) {
+        errorsCopy.email = "";
+      } else {
+        errorsCopy.email = "Email is required!";
+        valid = false;
+      }
+
+      setErrors(errorsCopy);
+
+      return valid;
+    }
   };
 
   return (
@@ -42,9 +84,12 @@ const Employee = () => {
                   placeholder="Enter first name"
                   name="firstName"
                   value={firstName}
-                  className="form-control"
+                  className={`form-control ${errors.firstName ? "is-invalid" : ""}`}
                   onChange={(event) => setFirstName(event.target.value)}
                 ></input>
+                {errors.firstName && (
+                  <div className={"invalid-feedback"}>{errors.firstName}</div>
+                )}
               </div>
 
               <div className="form-group mb-2">
@@ -54,9 +99,12 @@ const Employee = () => {
                   placeholder="Enter last name"
                   name="lastName"
                   value={lastName}
-                  className="form-control"
+                  className={`form-control ${errors.lastName ? "is-invalid" : ""}`}
                   onChange={(event) => setLastName(event.target.value)}
                 ></input>
+                {errors.lastName && (
+                  <div className={"invalid-feedback"}>{errors.lastName}</div>
+                )}
               </div>
 
               <div className="form-group mb-2">
@@ -66,9 +114,12 @@ const Employee = () => {
                   placeholder="Enter email"
                   name="email"
                   value={email}
-                  className="form-control"
+                  className={`form-control ${errors.email ? "is-invalid" : ""}`}
                   onChange={(event) => setEmail(event.target.value)}
                 ></input>
+                {errors.email && (
+                  <div className={"invalid-feedback"}>{errors.email}</div>
+                )}
               </div>
 
               <button className="btn btn-success" onClick={saveEmployee}>

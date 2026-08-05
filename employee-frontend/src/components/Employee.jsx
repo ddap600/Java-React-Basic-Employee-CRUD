@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import {
   createEmployee,
   getEmployeeById,
+  updateEmployee,
 } from "../services/EmployeeService.js";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -33,22 +34,37 @@ const Employee = () => {
     }
   }, [id]);
 
-  const saveEmployee = (event) => {
+  const saveOrUpdateEmployee = (event) => {
     event.preventDefault();
 
+    const employee = {
+      firstName,
+      lastName,
+      email,
+    };
+
+    console.log(employee);
+
     if (validateForm()) {
-      const employee = {
-        firstName,
-        lastName,
-        email,
-      };
-
-      console.log(employee);
-
-      createEmployee(employee).then((response) => {
-        console.log(response.data);
-        navigator("/employee");
-      });
+      if (id) {
+        updateEmployee(id, employee)
+          .then((response) => {
+            console.log(response.data);
+            navigator("/employee");
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      } else {
+        createEmployee(employee)
+          .then((response) => {
+            console.log(response.data);
+            navigator("/employee");
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      }
     }
 
     function validateForm() {
@@ -148,7 +164,10 @@ const Employee = () => {
                 )}
               </div>
 
-              <button className="btn btn-success" onClick={saveEmployee}>
+              <button
+                className="btn btn-success"
+                onClick={saveOrUpdateEmployee}
+              >
                 Submit
               </button>
             </form>

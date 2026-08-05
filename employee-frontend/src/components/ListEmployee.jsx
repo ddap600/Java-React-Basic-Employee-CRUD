@@ -22,8 +22,14 @@ const ListEmployee = () => {
     navigator("/add-employee");
   }
 
+  function updateEmployee(id) {
+    navigator(`/edit-employee/${id}`);
+  }
+
   return (
     <div className={"container"}>
+      <br />
+      <br />
       <h2 className={"text-center"}>List of employees</h2>
 
       <button className={"btn btn-primary mb-2"} onClick={addEmployee}>
@@ -37,6 +43,7 @@ const ListEmployee = () => {
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email Id</th>
+            <th>Actions</th>
           </tr>
         </thead>
 
@@ -47,6 +54,14 @@ const ListEmployee = () => {
               <td>{employee.firstName}</td>
               <td>{employee.lastName}</td>
               <td>{employee.email}</td>
+              <td>
+                <button
+                  className={"btn btn-info"}
+                  onClick={() => updateEmployee(employee.id)}
+                >
+                  Update
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
